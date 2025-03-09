@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Recipe Widget</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 1rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            padding-bottom: .5rem;
+        }
+
+        .recipe-container {
+            padding: 1rem;
+            max-width: 350px;
+            border: .1em solid black;
+            border-radius: 2%;
+        }
+
+        .list-item {
+            display: block;
+            padding-top: 1rem;
+            margin: 2px 0;
+        }
+
+        .list-item:nth-child(n+11) {
+            display: none;
+        }
+
+        #show-more:checked ~ .list .list-item {
+            display: block;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #show-more {
+            display: none;
+        }
+
+        .show-more-label {
+            padding: .25rem;
+            display: block;
+            margin-top: 10px;
+            justify-self: center;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .show-more-label::after {
+            content: "Show more";
+        }
+
+        #show-more:checked ~ .button-container .show-more-label::after {
+            content: "Show less";
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="recipe-container">
+        <div class="title">
+            <span>Meat Lasagna Recipe</span>
+        </div>
+    
+        <input type="checkbox" id="show-more">
+        <div class="list">
+            <div class="list-item">1 pound sweet Italian sausage</div>
+            <div class="list-item">3/4 pound lean ground beef</div>
+            <div class="list-item">1/2 cup minced onion</div>
+            <div class="list-item">2 cloves garlic, crushed</div>
+            <div class="list-item">1 (28 ounce) can crushed tomatoes</div>
+            <div class="list-item">2 (6 ounce) cans tomato paste</div>
+            <div class="list-item">2 (6.5 ounce) cans canned tomato sauce</div>
+            <div class="list-item">1/2 cup water</div>
+            <div class="list-item">2 tablespoons white sugar</div>
+            <div class="list-item">1 1/2 teaspoons dried basil leaves</div>
+            <div class="list-item">1/2 teaspoon fennel seeds</div>
+            <div class="list-item">1 teaspoon Italian seasoning</div>
+            <div class="list-item">1 1/2 teaspoons salt, divided, or to taste</div>
+            <div class="list-item">1/4 teaspoon ground black pepper</div>
+            <div class="list-item">4 tablespoons chopped fresh parsley</div>
+            <div class="list-item">12 lasagna noodles</div>
+            <div class="list-item">1 egg</div>
+            <div class="list-item">3/4 pound mozzarella cheese, sliced</div>
+            <div class="list-item">3/4 cup gated Parmesan cheese</div>
+        </div>
+        <div class="button-container">
+            <label for="show-more" class="show-more-label"></label>
+        </div>
+    </div>
+</body>
